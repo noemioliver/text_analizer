@@ -25,15 +25,31 @@ def word_frequency(text):
     """Retorna un diccionario con las palabras y su frecuencia en el texto"""
     pass
 
-def longer_word(text):
+def palabra_mas_larga(texto):
     # Noemí
-    """Return the longer word in the text"""
-    pass
+    palabras = texto.split()  
+    palabra_larga = palabras[0]  
+    for palabra in palabras:
+        if len(palabra) > len(palabra_larga):
+            palabra_larga = palabra
+    return palabra_larga
 
-def shorter_word(text):
-    # Noemí
-    """Return the shorter word in the text"""
-    pass
+
+texto = "Me llamo Noemí y vivo en Huesca"
+print("La palabra más larga es:", palabra_mas_larga(texto))
+
+def palabra_mas_corta(texto):
+    #Noemí
+    palabras = texto.split()  
+    palabra_corta = palabras[0]  
+    for palabra in palabras:
+        if len(palabra) < len(palabra_corta):
+            palabra_corta = palabra
+    return palabra_corta
+
+
+texto = "Me llamo Noemí y vivo en Huesca"
+print("La palabra más corta es:", palabra_mas_corta(texto))
 
 def word_filter(words, filter_words):
     # Ruben
